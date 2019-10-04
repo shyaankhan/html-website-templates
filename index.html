@@ -423,6 +423,13 @@ function submitted() {
   document.getElementById("user-last-name").value = "";
   document.getElementById("user-email").value = "";
 
+  analytics.identify(first_name+last_name, {
+    firstname: first_name,
+    lastname: last_name, 
+    email: email
+  });
+
+
 }
 </script>
 		
