@@ -190,10 +190,10 @@
           </div>
           <p class="ae-3"><span class="opacity-8">Start now and get <b>free bonus</b> on account</span></p>
           <form class="slides-form" action="#" autocomplete="off">
-            <input type="email" class="input-9 ae-4 fromCenter" name="user-email" placeholder="Email" val=""/>
-            <input type="password" class="input-9 ae-5 fromCenter" name="user-password" placeholder="Password" val=""/>
+            <input type="name" class="input-9 ae-4 fromCenter" name="user-name" placeholder="Name" val=""/>
+            <input type="email" class="input-9 ae-5 fromCenter" name="user-email" placeholder="Email" val=""/>
             <input type="password" class="input-9 ae-6 fromCenter" name="confirm-password" placeholder="Confirm the password" val=""/>
-            <button type="submit" class="button blue gradient ae-7 fromCenter" name="button">Get Started</button>
+            <button type="submit" class="button blue gradient ae-7 fromCenter" name="button" onclick="submitted()">Get Started</button>
           </form>
         </div>
 
@@ -412,6 +412,17 @@
 
 <!-- Loading Progress Bar -->
 <div class="progress-bar blue"></div>
+
+<script>
+function submitted() {
+  document.getElementById("name").value
+
+  analytics.identify("97980cfea0067", {
+    name: document.getElementById("name").value, 
+    email: document.getElementById("email").value, 
+  });
+}
+</script>
 		
 </body>
 </html>
