@@ -182,10 +182,10 @@
           </div>
           <p class="ae-3"><span class="opacity-8">Start now and get <b>free bonus</b> on account</span></p>
           <form class="slides-form" onsubmit="return false" autocomplete="off">
-            <input type="name" class="input-9 ae-4 fromCenter" id="user-name-id" placeholder="Name" val=""/>
-            <input type="email" class="input-9 ae-5 fromCenter" id="user-email-id" placeholder="Email" val=""/>
-            <input type="password" class="input-9 ae-6 fromCenter" name="confirm-password" placeholder="Confirm the password" val=""/>
-            <button type="submit" class="button blue gradient ae-7 fromCenter" onclick="submitted()">Get Started</button>
+            <input type="name" class="input-9 ae-4 fromCenter" id="user-first-name" placeholder="First Name" val=""/>
+            <input type="name" class="input-9 ae-5 fromCenter" id="user-last-name" placeholder="Last Name" val=""/>
+            <input type="email" class="input-9 ae-6 fromCenter" id="user-email" placeholder="Email" val=""/>
+            <button type="submit" class="button blue gradient ae-7 fromCenter" onclick="submitted()">Sign Up</button>
           </form>
         </div>
 
@@ -407,11 +407,14 @@
 
 <script>
 function submitted() {
-  var name = document.getElementById("user-name-id").value;
-  var email = document.getElementById("user-email-id").value;
-  console.log(name + " "+email);
-  document.getElementById("user-name-id").value = "";
-  document.getElementById("user-email-id").value = "";
+  var first_name = document.getElementById("user-first-name").value;
+  var last_name = document.getElementById("user-last-name").value;
+  var email = document.getElementById("user-email").value;
+  console.log(first_name + " "+ last_name+", "+email);
+  document.getElementById("user-first-name").value = "";
+  document.getElementById("user-last-name").value = "";
+  document.getElementById("user-email").value = "";
+  
 }
 </script>
 		
